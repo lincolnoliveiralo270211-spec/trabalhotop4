@@ -1,0 +1,821 @@
+
+/* =================================
+   1. CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --dark: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --background: #f5f7fb;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --green: #16a34a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* =================================
+   2. CABEÇALHO
+================================= */
+
+.topbar {
+    height: 76px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark);
+    font-size: 21px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background: var(--primary);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.brand-highlight {
+    color: var(--primary);
+}
+
+.top-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.top-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+    color: var(--primary);
+}
+
+.header-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+}
+
+/* =================================
+   3. APRESENTAÇÃO PRINCIPAL
+================================= */
+
+.hero {
+    min-height: 390px;
+    padding: 65px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #ffffff 45%, #eff5ff);
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin-top: 17px;
+    color: var(--dark);
+    font-size: clamp(34px, 4vw, 49px);
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-content > p {
+    margin-top: 17px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =================================
+   4. PESQUISA
+================================= */
+
+.search-container {
+    margin-top: 28px;
+    max-width: 620px;
+    width: 100%;
+    height: 60px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.search-icon {
+    padding-left: 12px;
+    color: var(--muted);
+    font-size: 30px;
+}
+
+.search-container input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: var(--dark);
+}
+
+.search-container button {
+    height: 46px;
+    padding: 0 23px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.search-container button:hover {
+    background: var(--primary-dark);
+}
+
+.search-hint {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* =================================
+   5. ELEMENTO DECORATIVO
+================================= */
+
+.hero-decoration {
+    position: relative;
+    width: 300px;
+    height: 240px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.decoration-circle {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: #dbeafe;
+    border-radius: 50%;
+}
+
+.decoration-card {
+    position: relative;
+    width: 230px;
+    padding: 28px;
+    background: white;
+    border: 1px solid #e0eaff;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(37, 99, 235, 0.12);
+}
+
+.decoration-label {
+    display: block;
+    margin-bottom: 17px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.decoration-card strong {
+    display: block;
+    color: var(--dark);
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+
+.decoration-card .blue-text {
+    color: var(--primary);
+}
+
+.decoration-line {
+    height: 1px;
+    margin: 18px 0;
+    background: var(--border);
+}
+
+.decoration-small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =================================
+   6. INDICADORES
+================================= */
+
+.stats-grid {
+    max-width: 1100px;
+    margin: -25px auto 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    position: relative;
+}
+
+.stat-card {
+    min-height: 100px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+}
+
+.stat-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.blue-bg {
+    background: #eff6ff;
+    color: var(--primary);
+}
+
+.green-bg {
+    background: #f0fdf4;
+    color: var(--green);
+}
+
+.purple-bg {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+.stat-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.stat-card strong {
+    color: var(--dark);
+    font-size: 21px;
+}
+
+/* =================================
+   7. CATÁLOGO
+================================= */
+
+.catalog {
+    max-width: 1100px;
+    margin: 75px auto;
+    padding: 0 20px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-heading h2,
+.about-section h2 {
+    margin-top: 9px;
+    color: var(--dark);
+    font-size: 28px;
+    letter-spacing: -0.7px;
+}
+
+.section-heading p {
+    margin-top: 9px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.favorites-filter {
+    padding: 11px 16px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.favorites-filter:hover,
+.favorites-filter.active {
+    background: #fff1f2;
+    color: #e11d48;
+    border-color: #fecdd3;
+}
+
+/* =================================
+   8. CATEGORIAS E ORDENAÇÃO
+================================= */
+
+.catalog-controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.category-list {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.category-button {
+    padding: 10px 15px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.category-button:hover,
+.category-button.active {
+    color: white;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-container label {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.sort-container select {
+    padding: 10px 13px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    outline: none;
+    cursor: pointer;
+}
+
+/* =================================
+   9. CONTAGEM DOS RESULTADOS
+================================= */
+
+.results-heading {
+    margin: 27px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+#results-count {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.demo-label {
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: #fff7ed;
+    color: #c2410c;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+/* =================================
+   10. PRODUTOS
+================================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.product-card {
+    position: relative;
+    min-width: 0;
+    padding: 17px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.025);
+    transition: 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.07);
+}
+
+.product-image-container {
+    position: relative;
+    height: 170px;
+    margin-bottom: 15px;
+    display: grid;
+    place-items: center;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: 145px;
+    padding: 10px;
+    object-fit: contain;
+}
+
+.product-category {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: #eff6ff;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.product-info h3 {
+    min-height: 42px;
+    margin-top: 11px;
+    color: var(--dark);
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.product-store {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.product-divider {
+    height: 1px;
+    margin: 16px 0;
+    background: var(--border);
+}
+
+.product-price-area {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.price-caption {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.product-price {
+    color: var(--green);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+.old-price {
+    color: #94a3b8;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.product-actions {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.offer-button {
+    flex: 1;
+    padding: 12px 10px;
+    display: block;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.offer-button:hover {
+    background: var(--primary-dark);
+}
+
+.favorite-button {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.favorite-button:hover,
+.favorite-button.active {
+    color: #e11d48;
+    background: #fff1f2;
+    border-color: #fecdd3;
+}
+
+.best-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 8px;
+    background: #dcfce7;
+    color: #15803d;
+    border-radius: 6px;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+/* =================================
+   11. ESTADO VAZIO
+================================= */
+
+.empty-state {
+    grid-column: 1 / -1;
+    padding: 55px 20px;
+    text-align: center;
+    background: white;
+    border: 1px dashed #cbd5e1;
+    border-radius: 13px;
+}
+
+.empty-state h3 {
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.empty-state p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* =================================
+   12. SOBRE
+================================= */
+
+.about-section {
+    max-width: 1060px;
+    margin: 0 auto 70px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.about-section > div:first-child {
+    max-width: 650px;
+}
+
+.about-section p {
+    margin-top: 13px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.about-mark {
+    color: #dbeafe;
+    font-size: 100px;
+    font-weight: 900;
+}
+
+/* =================================
+   13. RODAPÉ
+================================= */
+
+footer {
+    min-height: 90px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: white;
+    border-top: 1px solid var(--border);
+}
+
+footer p,
+footer > span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer-brand {
+    font-size: 17px;
+}
+
+/* =================================
+   14. RESPONSIVIDADE
+================================= */
+
+@media (max-width: 850px) {
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero-decoration {
+        width: 230px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .topbar {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 650px) {
+    .topbar {
+        height: auto;
+        min-height: 70px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .top-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .header-status {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 45px 22px;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .search-container {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 9px;
+    }
+
+    .search-container input {
+        min-height: 43px;
+    }
+
+    .search-container button {
+        width: 100%;
+    }
+
+    .stats-grid {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .catalog {
+        margin-top: 55px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .catalog-controls {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .category-list {
+        width: 100%;
+    }
+
+    .sort-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        margin: 0 15px 45px;
+        padding: 25px;
+    }
+
+    .about-mark {
+        display: none;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

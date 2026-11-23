@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare preços e encontre as melhores ofertas.">
+    <title>PreçoCerto | Comparador de Preços</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">P</span>
+            <span>Preço<span class="brand-highlight">Certo</span></span>
+        </a>
+
+        <nav class="top-nav">
+            <a href="#inicio" class="active">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            Comparador online
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="eyebrow">COMPRE MELHOR, GASTE MENOS</span>
+
+                <h1>Encontre o melhor preço.<br>
+                    <span>Economize de verdade.</span>
+                </h1>
+
+                <p>
+                    Pesquise produtos, compare ofertas e descubra
+                    onde comprar pagando menos.
+                </p>
+
+                <div class="search-container">
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="product-search"
+                        placeholder="O que você está procurando?"
+                        autocomplete="off"
+                    >
+
+                    <button id="search-button">Pesquisar</button>
+                </div>
+
+                <div class="search-hint">
+                    Experimente pesquisar: mouse, teclado ou fone
+                </div>
+            </div>
+
+            <div class="hero-decoration">
+                <div class="decoration-circle"></div>
+                <div class="decoration-card">
+                    <span class="decoration-label">ECONOMIA INTELIGENTE</span>
+                    <strong>Compare.</strong>
+                    <strong class="blue-text">Escolha.</strong>
+                    <strong>Economize.</strong>
+                    <div class="decoration-line"></div>
+                    <span class="decoration-small">O melhor negócio começa aqui.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-icon blue-bg">▦</div>
+                <div>
+                    <span class="stat-label">Produtos disponíveis</span>
+                    <strong id="total-products">0</strong>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon green-bg">↓</div>
+                <div>
+                    <span class="stat-label">Menor preço encontrado</span>
+                    <strong id="lowest-price">R$ 0,00</strong>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon purple-bg">♡</div>
+                <div>
+                    <span class="stat-label">Seus favoritos</span>
+                    <strong id="total-favorites">0</strong>
+                </div>
+            </article>
+        </section>
+
+        <section class="catalog" id="produtos">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">CATÁLOGO</span>
+                    <h2>Explore os produtos</h2>
+                    <p>Encontre o que procura e compare as opções.</p>
+                </div>
+
+                <button id="favorites-filter" class="favorites-filter">
+                    ♡ Meus favoritos
+                </button>
+            </div>
+
+            <div class="catalog-controls">
+                <div class="category-list" id="category-list">
+                    <button class="category-button active" data-category="Todos">
+                        Todos
+                    </button>
+                    <button class="category-button" data-category="Informática">
+                        Informática
+                    </button>
+                    <button class="category-button" data-category="Áudio">
+                        Áudio
+                    </button>
+                    <button class="category-button" data-category="Periféricos">
+                        Periféricos
+                    </button>
+                    <button class="category-button" data-category="Casa">
+                        Casa
+                    </button>
+                </div>
+
+                <div class="sort-container">
+                    <label for="sort-price">Ordenar:</label>
+                    <select id="sort-price">
+                        <option value="asc">Menor preço</option>
+                        <option value="desc">Maior preço</option>
+                        <option value="name">Nome</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-heading">
+                <span id="results-count">0 produtos encontrados</span>
+                <span class="demo-label">PREÇOS DEMONSTRATIVOS</span>
+            </div>
+
+            <div id="results" class="product-grid"></div>
+        </section>
+
+        <section class="about-section" id="sobre">
+            <div>
+                <span class="eyebrow">NOSSA PROPOSTA</span>
+                <h2>Comprar bem começa com informação.</h2>
+                <p>
+                    O PreçoCerto foi desenvolvido para facilitar
+                    a comparação de produtos e ajudar você a tomar
+                    decisões de compra mais conscientes.
+                </p>
+            </div>
+            <div class="about-mark">P.</div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#inicio" class="brand footer-brand">
+            <span class="brand-icon">P</span>
+            <span>Preço<span class="brand-highlight">Certo</span></span>
+        </a>
+        <p>Projeto demonstrativo de comparação de preços.</p>
+        <span>© 2026 PreçoCerto</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
